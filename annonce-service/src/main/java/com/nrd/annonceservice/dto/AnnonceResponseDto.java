@@ -19,4 +19,11 @@ public class AnnonceResponseDto {
     private String statut;
     private int vues;
     private int messages;
+    private int nombreSignalements;
+    private String ville;
+    private String adresse;
+    private String telephone;
+    private LocalDateTime datePublication;
+    private boolean isOwner = false; // Pour savoir si c'est son annonce
+
 }

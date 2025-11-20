@@ -11,11 +11,18 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/api/users/**
-
         - id: annonce-service
-          uri: lb://annonce-service
+          uri: http://localhost:8085
           predicates:
-            - Path=/api/annonces/**
+            - Path=/api/annonces/**,/api/categories/**,/api/admin/stats
+        - id: user-admin-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/admin/users/**
+        - id: messagerie-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/messages/**,/api/conversations/**
 
     discovery:
       enabled: true

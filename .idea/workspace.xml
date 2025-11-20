@@ -4,7 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71b57023-87ef-490f-97e0-aaa39f9881d7" name="Changes" comment="" />
+    <list default="true" id="71b57023-87ef-490f-97e0-aaa39f9881d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/annonce-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/Security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/Security/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/Security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/client/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/config/CloudinaryConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/config/FeignAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/enumeration/Statut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/enumeration/TypePrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/service/ImageUploadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/GenerateKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/config/AnnonceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/config/FeignAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/config/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/config/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/dto/MessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/entity/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/exception/MessageWebSocketHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/security/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/config/FeignAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/config/FirebaseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/dto/AuthResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/JwtKeyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/AnnonceServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/AnnonceServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/Security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/Security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/client/IaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/client/IaClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/AnnonceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/AnnonceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/CategorieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/CategorieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/SignalementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/controller/SignalementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/AnnonceCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/AnnonceCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/AnnonceResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/AnnonceResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/SignalementDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/dto/SignalementDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/entity/Annonce.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/entity/Annonce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/entity/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/entity/Categorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/AnnonceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/AnnonceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/CategorieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/CategorieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/SignalementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/repository/SignalementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/service/AnnonceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/service/AnnonceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annonce-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/annonce-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateaway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateaway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateaway/src/main/java/com/nrd/apigateaway/ApiGateawayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateaway/src/main/java/com/nrd/apigateaway/ApiGateawayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateaway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateaway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messagerie/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/messagerie/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/MessagerieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/MessagerieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/messagerie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/messagerie/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/dto/UserProfileUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/dto/UserProfileUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/dto/UserRegistrationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/security/SecurityUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +95,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Enum" />
+        <option value="Dockerfile" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,42 +124,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.annonce-service [clean].executor": "Run",
-    "Maven.annonce-service [install].executor": "Run",
-    "Maven.api-gateaway [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AnnonceServiceApplication.executor": "Run",
-    "Spring Boot.ApiGateawayApplication.executor": "Run",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mac/Desktop/Memoire/backend/annonce-service/src/main/java/com/nrd/annonceservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GenerateKey.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JwtKeyGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.annonce-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.annonce-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.api-gateaway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
+    &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AnnonceServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiGateawayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MessagerieApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac/Desktop/Memoire/backend/user-service/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nrd.annonceservice.config" />
+      <recent name="com.nrd.messagerie.security" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -105,7 +188,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="RunManager" selected="Spring Boot.AnnonceServiceApplication">
+    <configuration name="GenerateKey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nrd.messagerie.GenerateKey" />
+      <module name="messagerie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nrd.messagerie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtKeyGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nrd.userservice.security.JwtKeyGenerator" />
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nrd.userservice.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnnonceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="annonce-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nrd.annonceservice.AnnonceServiceApplication" />
@@ -141,6 +250,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JwtKeyGenerator" />
+        <item itemvalue="Application.GenerateKey" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -151,6 +266,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="71b57023-87ef-490f-97e0-aaa39f9881d7" name="Changes" comment="" />
@@ -173,22 +291,70 @@
       <workItem from="1754664949251" duration="33771000" />
       <workItem from="1755012004480" duration="9452000" />
       <workItem from="1755184164260" duration="15116000" />
-      <workItem from="1755565765694" duration="7517000" />
+      <workItem from="1755565765694" duration="90465000" />
+      <workItem from="1756671543438" duration="127068000" />
+      <workItem from="1757120848352" duration="11848000" />
+      <workItem from="1757164876751" duration="42000" />
+      <workItem from="1757164939580" duration="69403000" />
+      <workItem from="1757329116222" duration="6458000" />
+      <workItem from="1758548496625" duration="603000" />
+      <workItem from="1759252690592" duration="768000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-websocket" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:io.grpc:grpc-api" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.ws.rs:jakarta.ws.rs-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/annonce-service/src/main/java/com/nrd/annonceservice/service/AnnonceService.java</url>
+          <line>114</line>
+          <properties class="com.nrd.annonceservice.service.AnnonceService" method="getAnnonceDetails">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/service/MessageService.java</url>
+          <line>171</line>
+          <properties class="com.nrd.messagerie.service.MessageService" method="getConversationPartners">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-service/src/main/java/com/nrd/userservice/entity/User.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/messagerie/src/main/java/com/nrd/messagerie/controller/MessageController.java</url>
+          <line>240</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

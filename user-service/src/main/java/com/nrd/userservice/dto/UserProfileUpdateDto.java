@@ -9,6 +9,6 @@ public class UserProfileUpdateDto {
     private String prenom;
     private String nom;
     private String avatar;
-    @NotBlank(message = "Réseaux requis pour vendeurs") // Validation pour première annonce
-    private Map<String, String> socialNetworks; // Updatable
+    @NotBlank(message = "Réseaux requis pour vendeurs")
+    private Map<String, String> socialNetworks;
 }

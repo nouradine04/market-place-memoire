@@ -25,19 +25,21 @@ public class User {
     private String avatar;
     @ElementCollection
     private Map<String, String> socialNetworks;
-    private boolean isVendeur = false; // true a la  premiere annonce
+    @Builder.Default
+    private boolean vendeur = false; // true a la  premiere annonce
+    @Builder.Default
     private boolean estBloque = false;
-
+    @Builder.Default
     @Enumerated(EnumType.STRING)
-    private Role role = Role.USER;  // USER par défaut, ADMIN pour admins
+    private Role role = Role.USER;
 
     // Enum Role
     public enum Role {
         USER, ADMIN
     }
 
-    // Méthode pour hasher
+    // Méthode pour setter le password (déjà hashé)
     public void setPassword(String password) {
-        this.password = new BCryptPasswordEncoder().encode(password);
+        this.password = password;
     }
 }

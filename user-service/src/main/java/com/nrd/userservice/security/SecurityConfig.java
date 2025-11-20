@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableMethodSecurity(prePostEnabled = true)
 @RequiredArgsConstructor
 public class SecurityConfig {
 
@@ -23,25 +23,28 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.
-                .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeRequests()
-                .antMatchers("/api/users/register", "/api/users/login").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
+        http
+                .csrf(csrf -> csrf.disable())
+                .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/users/register", "/api/users/login", "/api/users/oauth/google").permitAll()
+                        .requestMatchers("/api/users/*/name").permitAll() // Pour messagerie
+                        .requestMatchers("/api/users/*/public-profile").permitAll() // Pour visiteurs non connectés
+                        .requestMatchers("/api/users/become-seller").authenticated()
+                        .requestMatchers("/h2-console").permitAll()
+                        .requestMatchers("/api/users/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/users/**").authenticated()
+                        .anyRequest().authenticated()
+                )
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(
-            AuthenticationConfiguration authConfig) throws Exception {
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
     }
-
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {

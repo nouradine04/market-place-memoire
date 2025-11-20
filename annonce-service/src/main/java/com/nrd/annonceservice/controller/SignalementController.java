@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/signalements")
 @RequiredArgsConstructor
+
 public class SignalementController {
 
     private final SignalementService signalementService;

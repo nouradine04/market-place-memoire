@@ -18,7 +18,7 @@ public class UserRegistrationDto {
     @NotBlank(message = "Mot de passe requis")
     @Size(min = 6, message = "Mot de passe trop court")
     private String password;
-    private Map<String, String> socialNetworks; // Optionnel à inscription
+    private Map<String, String> socialNetworks;
 
 
 }

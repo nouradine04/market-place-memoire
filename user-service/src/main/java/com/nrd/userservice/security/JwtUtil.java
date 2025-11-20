@@ -1,58 +1,88 @@
 package com.nrd.userservice.security;
 
-import com.nrd.userservice.entity.User;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
+import javax.crypto.SecretKey;
+import java.util.Base64;
 import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private final String SECRET_KEY = "n2r5u8x/A?D(G+KbPeShVmYq3t6w9z$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRg";  // Change en prod (env var)
-    private final long EXPIRATION_TIME = 86400000;  // 24h en ms
 
-    private Key getSigningKey() {
-        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+    private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
+
+    private final SecretKey secretKey;
+    private final long expiration;
+
+    public JwtUtil(@Value("${jwt.secret:}") String base64Key,
+                   @Value("${jwt.expiration:3600000}") long expiration) {
+
+        if (base64Key == null || base64Key.trim().isEmpty()) {
+            // Génération automatique d'une clé sécurisée
+            SecretKey generatedKey = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+            this.secretKey = generatedKey;
+            String autoKey = Base64.getEncoder().encodeToString(generatedKey.getEncoded());
+            logger.warn("Aucune clé JWT configurée. Clé auto-générée : {}", autoKey);
+        } else {
+            try {
+                byte[] decodedKey = Base64.getDecoder().decode(base64Key);
+                this.secretKey = Keys.hmacShaKeyFor(decodedKey);
+
+                // Vérification de la taille de la clé
+                if (secretKey.getEncoded().length < 64) { // 64 bytes = 512 bits
+                    throw new IllegalArgumentException("Clé JWT trop courte. Minimum 512 bits requis.");
+                }
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("Format de clé JWT invalide", e);
+            }
+        }
+        this.expiration = expiration;
     }
 
-    public String generateToken(User user) {
+    public String generateToken(Long userId, String role) {
         return Jwts.builder()
-                .setSubject(user.getEmail() != null ? user.getEmail() : user.getTelephone())
-                .claim("id", user.getId())
-                .claim("role", user.getRole().name())
-                .claim("isSeller", user.isVendeur())
+                .setSubject(String.valueOf(userId))
+                .claim("role", role)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
+                .setExpiration(new Date(System.currentTimeMillis() + expiration))
+                .signWith(secretKey, SignatureAlgorithm.HS512)
                 .compact();
     }
 
-    public Claims extractClaims(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(getSigningKey())
+    public Long getUserIdFromToken(String token) {
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(secretKey)
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
+        return Long.parseLong(claims.getSubject());
+    }
+    
+    public String getRoleFromToken(String token) {
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(secretKey)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+        return claims.get("role", String.class);
     }
 
-    public boolean isTokenValid(String token) {
+    public boolean validateToken(String token) {
         try {
-            extractClaims(token);
+            Jwts.parserBuilder()
+                    .setSigningKey(secretKey)
+                    .build()
+                    .parseClaimsJws(token);
             return true;
         } catch (Exception e) {
+       //     logger.warn("Token JWT invalide: {}", e.getMessage());
             return false;
         }
-    }
-
-    public Long getUserIdFromToken(String token) {
-        return extractClaims(token).get("id", Long.class);
-    }
-
-    public String getRoleFromToken(String token) {
-        return extractClaims(token).get("role", String.class);
     }
 }
